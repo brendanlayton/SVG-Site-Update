@@ -5,7 +5,8 @@ body {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #111;
-  background: url('images/background.png') #edeff0;
+  background: url('svgs/background.svg') #edeff0;
+	background-size: 5%;
 }
 
 #container {
@@ -25,6 +26,7 @@ a {
   text-decoration: none;
   color: #39add1;
   font-weight: 700;
+	transition: color .4s ease-in;
   }
   a:hover {
     color: #111;
@@ -74,4 +76,148 @@ footer {
   margin-top: 100px;
   padding-bottom: 30px;
   color: #ba8058;
+}
+
+/*===============================================
+
+	Added Styles
+
+===============================================*/
+
+.icon-fill {
+	fill: #39ADD1;
+}
+
+.logo {
+	width: 140px;
+	margin: 0 auto;
+	display: block;
+}
+
+.l-bg {
+	fill: #BA8058;
+}
+
+.l-text {
+	fill: #EAAA7F;
+}	
+						
+.l-paw {
+	fill: #F4C6A6;
+} 
+
+.title-mob {
+	display: none;
+}
+
+.dogs svg {
+	width: 170px;
+}
+
+.red .coat {fill:#BA8058;}	/* formally st0 */
+.red .face {fill:#FBFEFF;} /* formally st1 */
+.red .eye-nose {fill:#2D3339;} /* formally st2 */
+.red .brow {fill:#EAAA7F;} /* formally st3 */
+
+.fawn .coat {fill:#EAAA7F;} /* formally st0 */
+.fawn .face {fill:#FBFEFF;} /* formally st1 */
+.fawn .eye-nose {fill:#2D3339;} /* formally st2 */
+.fawn .brow {fill:#F4C6A6;} /* formally st3 */
+
+.sable .coat {fill:#844B24;} /* formally st0 */
+.sable .face {fill:#FBFEFF;} /* formally st1 */
+.sable .eye-nose {fill:#2D3339;} /* formally st2 */
+.sable .brow {fill:#BA8058;} /* formally st3 */
+
+.black-tan .brow {fill:#BA8058;} /* formally st0 */
+.black-tan .coat {fill:#52595F;} /* formally st1 */
+.black-tan .face {fill:#FBFEFF;} /* formally st2 */
+.black-tan .eye-nose {fill:#2D3339;} /* formally st3 */
+
+
+/* Animations -------- */
+
+.nav-icon {
+	width: 28px;
+	transition: transform .4s ease-in, fill .4s ease-in;
+}
+
+.nav-icon:hover .icon-fill {
+	fill: #111;
+}
+
+.nav-icon:hover {
+	transform: translateY(2px) scale(1.1);
+}
+
+.logo .l-circle,
+.logo .l-text-group {
+	transition: transform 1.5s ease-out;
+	transform-origin: 70.4px 69.9px;
+}	
+
+.logo:hover .l-circle {
+	transform: rotate(45deg);
+}
+
+.logo:hover .l-text-group {
+	transform: rotate(-45deg);
+}
+
+.eye-nose.wink,
+.brow.wink {
+	transition: transform .2s ease-in-out;
+	transform-origin: 30px 80px;
+}
+
+.head {
+	transition: transform .6s ease-in-out;
+	transform-origin: 100px 100px;
+}
+
+.red:hover .head,
+.fawn:hover .head,
+.sable:hover .head,
+.black-tan:hover .head {
+	transform: rotate(-1deg);
+}
+
+.red:hover .eye-nose.wink,
+.fawn:hover .eye-nose.wink,
+.sable:hover .eye-nose.wink,
+.black-tan:hover .eye-nose.wink {
+	transform: skew(35deg, 5deg) scale(.6);
+}
+
+.red:hover .brow.wink,
+.fawn:hover .brow.wink,
+.sable:hover .brow.wink,
+.black-tan:hover .brow.wink {
+	transform: rotateX(8deg) scale(.9) translate(-2px, 2px);
+}
+
+.red:hover .eye-nose.wink,
+.fawn:hover .eye-nose.wink,
+.sable:hover .eye-nose.wink,
+.black-tan:hover .eye-nose.wink {
+	opacity: .5;
+}
+
+/*===============================================
+
+	Media Queries
+
+===============================================*/
+
+@media only screen and (max-width: 419px) {
+	
+	.l-text {
+		opacity: 0;
+	}
+	
+	.title-mob {
+		display: block;
+		color: #EAAA7F;
+	}
+	
 }
